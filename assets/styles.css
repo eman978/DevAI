@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+/* ── Main Background ───────────────────────────────────────────── */
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"],
+[data-testid="stMainBlockContainer"] {
+    background-color: #ffffff !important;
+}
+
+/* ── All Text Black ────────────────────────────────────────────── */
+* {
+    color: #111827 !important;
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+/* ── Sidebar — Light Gray ──────────────────────────────────────── */
+[data-testid="stSidebar"],
+[data-testid="stSidebar"] > div {
+    background-color: #f3f4f6 !important;
+    border-right: 1px solid #e5e7eb !important;
+}
+
+[data-testid="stSidebar"] * {
+    color: #111827 !important;
+}
+
+/* ── Navigation Buttons ────────────────────────────────────────── */
+.stButton > button {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 0.88rem !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+    transition: all 0.15s ease !important;
+    width: 100% !important;
+}
+
+/* Active/Primary button — dark */
+.stButton > button[kind="primary"] {
+    background-color: #111827 !important;
+    color: #ffffff !important;
+    border: 1px solid #111827 !important;
+    font-size: 0.88rem !important;
+}
+
+.stButton > button[kind="primary"] * {
+    color: #ffffff !important;
+}
+
+.stButton > button[kind="primary"] p {
+    color: #ffffff !important;
+}
+.stButton > button[kind="primary"]:hover {
+    background-color: #374151 !important;
+}
+
+/* Inactive/Secondary button — light gray */
+.stButton > button[kind="secondary"] {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid #d1d5db !important;
+}
+
+.stButton > button[kind="secondary"]:hover {
+    background-color: #f9fafb !important;
+    border-color: #111827 !important;
+}
+
+/* ── Logo ──────────────────────────────────────────────────────── */
+.seaaa-logo {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    color: #111827 !important;
+    text-align: center;
+    padding: 1rem 0 0.25rem 0;
+    border-bottom: 2px solid #111827;
+    margin-bottom: 0.25rem;
+}
+
+.seaaa-tagline,
+.seaaa-version {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 0.63rem !important;
+    color: #6b7280 !important;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding-bottom: 0.3rem;
+}
+
+/* ── Text Inputs ───────────────────────────────────────────────── */
+.stTextArea textarea,
+.stTextInput input {
+    background-color: #f9fafb !important;
+    color: #111827 !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 8px !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 0.84rem !important;
+}
+
+.stTextArea textarea:focus,
+.stTextInput input:focus {
+    border-color: #111827 !important;
+    box-shadow: 0 0 0 2px rgba(17,24,39,0.08) !important;
+}
+
+/* ── Selectbox ─────────────────────────────────────────────────── */
+[data-testid="stSelectbox"] > div > div {
+    background-color: #f9fafb !important;
+    color: #111827 !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 8px !important;
+}
+
+/* ── Code Blocks ───────────────────────────────────────────────── */
+code {
+    background-color: #f3f4f6 !important;
+    color: #111827 !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+pre {
+    background-color: #f9fafb !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 8px !important;
+}
+
+/* ── Expander ──────────────────────────────────────────────────── */
+[data-testid="stExpander"] {
+    border: 1px solid #e5e7eb !important;
+    border-radius: 8px !important;
+    background-color: #f9fafb !important;
+}
+
+/* ── Divider ───────────────────────────────────────────────────── */
+hr {
+    border-color: #e5e7eb !important;
+    margin: 1rem 0 !important;
+}
+
+/* ── Feature Cards ─────────────────────────────────────────────── */
+.feature-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 1.2rem;
+    margin-bottom: 0.5rem;
+    background-color: #f9fafb;
+    min-height: 130px;
+}
+
+.feature-card-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #111827 !important;
+    margin-bottom: 0.3rem;
+}
+
+.feature-card-desc {
+    font-size: 0.78rem;
+    color: #6b7280 !important;
+    line-height: 1.55;
+}
+
+/* ── Hide Streamlit Branding ───────────────────────────────────── */
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+[data-testid="stToolbar"] { display: none !important; }
+/* Hide Streamlit top header bar */
+[data-testid="stHeader"] {
+    background-color: #ffffff !important;
+    height: 0 !important;
+    display: none !important;
+}
+
+header[data-testid="stHeader"] {
+    display: none !important;
+}
+/* Dropdown options fix */
+[data-testid="stSelectbox"] ul,
+[data-baseweb="popover"],
+[data-baseweb="menu"],
+[role="listbox"],
+[role="option"] {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+}
+
+[role="option"]:hover {
+    background-color: #f3f4f6 !important;
+}
+
+[role="option"] * {
+    color: #111827 !important;
+}
+
+li[role="option"] {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+}
+/* Selected/highlighted option fix */
+[data-baseweb="menu"] ul li[aria-selected="true"],
+[role="option"][aria-selected="true"],
+[data-baseweb="option"]:hover,
+[data-baseweb="option"][aria-selected="true"] {
+    background-color: #e5e7eb !important;
+    color: #111827 !important;
+}
+
+[data-baseweb="option"][aria-selected="true"] * {
+    color: #111827 !important;
+}
