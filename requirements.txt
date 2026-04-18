@@ -1,0 +1,9 @@
+streamlit==1.41.1
+groq==0.13.0
+python-dotenv==1.0.1
+pyperclip==1.9.0
+Pygments==2.18.0
+groq==0.13.0
+Pygments==2.18.0
+python-dotenv==1.0.1
+streamlit==1.41.1
